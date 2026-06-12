@@ -1,0 +1,271 @@
+<!-- /index.html -->
+<!-- ボルスポ公式サイトのトップページです。 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ボルスポ - スポーツチーム・イベント検索</title>
+  <meta name="description" content="ボルスポは、スポーツチームの仲間集め、イベント検索、チーム参加を楽しめるスポーツマッチングアプリです。">
+
+  <style>
+    :root {
+      --primary: #5B6CFF;
+      --secondary: #7C5CFF;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(91, 108, 255, 0.16), transparent 34%),
+        radial-gradient(circle at top right, rgba(124, 92, 255, 0.14), transparent 30%),
+        var(--bg);
+      line-height: 1.8;
+    }
+
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0;
+    }
+
+    .hero {
+      padding: 48px 28px;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: 0 20px 60px rgba(31, 41, 55, 0.08);
+      backdrop-filter: blur(12px);
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(91, 108, 255, 0.1);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 8vw, 72px);
+      letter-spacing: -0.05em;
+      line-height: 1.08;
+    }
+
+    .lead {
+      max-width: 680px;
+      margin: 22px auto 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    a.button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    a.button:hover {
+      transform: translateY(-2px);
+    }
+
+    .primary {
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      box-shadow: 0 12px 24px rgba(91, 108, 255, 0.26);
+    }
+
+    .secondary {
+      color: var(--primary);
+      background: #ffffff;
+      border: 1px solid rgba(91, 108, 255, 0.24);
+    }
+
+    .section {
+      margin-top: 28px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: var(--card);
+      box-shadow: 0 12px 32px rgba(31, 41, 55, 0.05);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 1.2em;
+    }
+
+    li {
+      margin: 6px 0;
+      color: #374151;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .link-card {
+      display: block;
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      background: #ffffff;
+      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+    }
+
+    .link-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(91, 108, 255, 0.38);
+      box-shadow: 0 12px 28px rgba(31, 41, 55, 0.08);
+    }
+
+    .link-card strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 16px;
+    }
+
+    .link-card span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 32px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 640px) {
+      main {
+        width: min(100% - 24px, 920px);
+        padding: 32px 0;
+      }
+
+      .hero {
+        padding: 36px 20px;
+        border-radius: 24px;
+      }
+
+      .section {
+        padding: 22px;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="hero">
+      <div class="badge">Sports Matching App</div>
+      <h1>ボルスポ</h1>
+      <p class="lead">
+        ボルスポは、スポーツチームの仲間集め、イベント検索、チーム参加をアプリ内で楽しめるサービスです。
+        チームを探したい人と、メンバーを募集したいチームをつなぎます。
+      </p>
+
+      <div class="buttons">
+        <a class="button primary" href="https://apps.apple.com/jp/app/borusupo/" target="_blank" rel="noopener noreferrer">
+          App Store でダウンロード
+        </a>
+        <a class="button secondary" href="https://www.instagram.com/volspo_official" target="_blank" rel="noopener noreferrer">
+          公式 Instagram
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>ボルスポでできること</h2>
+      <ul>
+        <li>スポーツチームを探して、気になるチームへメッセージを送れます。</li>
+        <li>チームを作成して、メンバーやイベント参加者を募集できます。</li>
+        <li>カレンダーや地図から、参加できるスポーツイベントを見つけられます。</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>公式情報</h2>
+      <p>
+        ご利用前に、利用規約とプライバシーポリシーをご確認ください。
+      </p>
+
+      <div class="links">
+        <a class="link-card" href="/terms_of_service/">
+          <strong>利用規約</strong>
+          <span>ボルスポをご利用いただく際のルールです。</span>
+        </a>
+
+        <a class="link-card" href="/privacy_policy/">
+          <strong>プライバシーポリシー</strong>
+          <span>取得する情報、利用目的、第三者サービスについて説明しています。</span>
+        </a>
+
+        <a class="link-card" href="mailto:borspo.support@gmail.com">
+          <strong>お問い合わせ</strong>
+          <span>不具合報告・ご相談はこちらからお願いします。</span>
+        </a>
+
+        <a class="link-card" href="/app-ads.txt">
+          <strong>app-ads.txt</strong>
+          <span>広告配信者確認用のファイルです。</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 ボルスポ. All rights reserved.</p>
+    </footer>
+  </main>
+</body>
+</html>
